@@ -12,9 +12,9 @@
 #### b. 获取必要ID <br>
 ADMIN_UID：你的 Telegram User ID（可通过 @userinfobot 获取） <br>
 
-GROUP_ID：管理群组的 ID（需将机器人拉入群组，发送一条消息，访问 https://api.telegram.org/bot<TOKEN>/getUpdates 查看 chat.id） <br>
+GROUP_ID：接收消息群组的 ID（需需要打开群组分组功能） <br>
 
-CHANNEL_ID：频道 ID（格式为 @频道用户名 或 -100 开头的数字ID） <br>
+CHANNEL_ID：投稿发送的频道 ID（格式为 @频道用户名 或 -100 开头的数字ID） <br>
 
 ### 2. 创建 Cloudflare Worker <br>
 登录 Cloudflare Dashboard <br>
@@ -38,7 +38,7 @@ KV 名称	用途 <br>
 USER_TOPICS	用户话题、消息映射、广告、禁词等 <br>
 USER_BLOCKS	用户屏蔽状态 <br>
 KEYWORD	关键词回复配置 <br>
-TIMES	定时任务（广告、自动删除） <br>
+TIMES	定时任务（广告、自动删除） <br><br>
 创建方法： <br>
 
 进入 Workers & Pages → KV <br>
