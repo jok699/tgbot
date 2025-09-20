@@ -12,7 +12,7 @@
 #### b. 获取必要ID <br>
 ADMIN_UID：你的 Telegram User ID（可通过 @userinfobot 获取） <br>
 
-GROUP_ID：接收消息群组的 ID（需需要打开群组分组功能） <br>
+GROUP_ID：接收消息活着被管理群组的 ID（接收消息都群组需要打开群组分组功能） <br>
 
 CHANNEL_ID：投稿发送的频道 ID（格式为 @频道用户名 或 -100 开头的数字ID） <br>
 
