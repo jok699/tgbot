@@ -67,7 +67,7 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 
 ## 📖 二、使用教程 <br>
 ### 1. 用户命令（私聊机器人） <br>
-命令	说明 <br>
+
 /start	开始使用，查看用户信息 <br>
 /help	查看帮助信息 <br>
 /me	查看我的信息（状态、模式等） <br>
@@ -76,35 +76,35 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 /ch	汉化（需配置关键词回复） <br>
 ### 2. 管理员命令（在群组或私聊中使用） <br>
 用户管理 <br>
-命令	说明 <br>
+
 /ban	屏蔽用户（回复或输入ID） <br>
 /unban	解除屏蔽 <br>
 /info	查看用户信息 <br>
 /list	列出所有用户 <br>
 /biu <消息>	向所有用户广播消息 <br>
-/status	查看统计信息 <br>
+/status	查看统计信息 <br><br>
 投稿审核 <br>
-命令	说明 <br>
+
 /approve	通过投稿（回复消息） <br>
 /approve_anon	匿名通过投稿 <br>
-/reject	拒绝投稿 <br>
+/reject	拒绝投稿 <br><br>
 关键词回复 <br>
-命令	说明 <br>
+
 /add 关键词	添加关键词回复（在数据库组中回复消息，格式“/add 关键词1 关键词2 1m”，后面的1m表示1分钟后自动删除，不设置时间代表不会自动删除） <br>
 /rm 关键词	删除关键词 <br>
 /keywords	列出所有关键词 <br>
-/toggle_keywords	开关关键词回复功能 <br>
+/toggle_keywords	开关关键词回复功能 <br><br>
 群组管理 <br>
-命令	说明 <br>
+
 /addgroup <群组ID>	添加被管理群组 <br>
 /rmgroup <群组ID>	移除被管理群组 <br>
 /group	开关群组管理功能 <br>
 /fdb 禁词1 禁词2	添加禁词 <br>
 /no 禁词1 禁词2	删除禁词 <br>
 /forbid	列出禁词 <br>
-/toggle_fdb	开关禁词功能 <br>
+/toggle_fdb	开关禁词功能 <br><br>
 广告管理 <br>
-命令	说明 <br>
+
 /ad 13:10 60m	添加广告（在广告组中回复消息，13.10表示下午1点半发送第一条广告，60m代表每隔1小时轮播发送） <br>
 /ads	列出广告 <br>
 /del <消息ID>	删除广告 <br>
