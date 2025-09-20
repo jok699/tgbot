@@ -90,7 +90,7 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 /reject	拒绝投稿 <br>
 关键词回复 <br>
 命令	说明 <br>
-/add 关键词	添加关键词回复（在数据库组中回复消息） <br>
+/add 关键词	添加关键词回复（在数据库组中回复消息，格式“/add 关键词1 关键词2 1m”，后面的1m表示1分钟后自动删除，不设置时间代表不会自动删除） <br>
 /rm 关键词	删除关键词 <br>
 /keywords	列出所有关键词 <br>
 /toggle_keywords	开关关键词回复功能 <br>
@@ -105,7 +105,7 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 /toggle_fdb	开关禁词功能 <br>
 广告管理 <br>
 命令	说明 <br>
-/ad 13:10 60m	添加广告（在广告组中回复消息） <br>
+/ad 13:10 60m	添加广告（在广告组中回复消息，13.10表示下午1点半发送第一条广告，60m代表每隔1小时轮播发送） <br>
 /ads	列出广告 <br>
 /del <消息ID>	删除广告 <br>
 /toggle_ad	开关广告轮播 <br>
