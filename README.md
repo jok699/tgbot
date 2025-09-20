@@ -1,6 +1,6 @@
 ## 🚀 一、部署流程 ##
-1. 准备环境 <br>
-a. 注册并配置 Telegram Bot <br>
+### 1. 准备环境 <br>
+#### a. 注册并配置 Telegram Bot <br>
 在 Telegram 中搜索 @BotFather，创建新机器人： <br>
 
 发送 /newbot <br>
@@ -9,14 +9,14 @@ a. 注册并配置 Telegram Bot <br>
 
 保存生成的 Bot Token（格式如 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11） <br>
 
-b. 获取必要ID <br>
+#### b. 获取必要ID <br>
 ADMIN_UID：你的 Telegram User ID（可通过 @userinfobot 获取） <br>
 
 GROUP_ID：管理群组的 ID（需将机器人拉入群组，发送一条消息，访问 https://api.telegram.org/bot<TOKEN>/getUpdates 查看 chat.id） <br>
 
 CHANNEL_ID：频道 ID（格式为 @频道用户名 或 -100 开头的数字ID） <br>
 
-2. 创建 Cloudflare Worker <br>
+### 2. 创建 Cloudflare Worker <br>
 登录 Cloudflare Dashboard <br>
 
 进入 Workers & Pages → Create Worker <br>
@@ -31,7 +31,7 @@ ENV_BOT_SECRET	自定义字符串（用于 Webhook 验证）	可选但建议设�
 ENV_ADMIN_UID	你的 User ID	必填 <br>
 ENV_GROUP_ID	管理群组 ID	必填 <br>
 ENV_CHANNEL_ID	频道 ID	必填 <br>
-3. 创建 KV 命名空间 <br>
+### 3. 创建 KV 命名空间 <br>
 机器人使用 4 个 KV 存储： <br>
 
 KV 名称	用途 <br>
@@ -47,14 +47,14 @@ TIMES	定时任务（广告、自动删除） <br>
 
 在 Worker 的 Settings → Variables → KV Namespace Bindings 中绑定 <br>
 
-4. 部署代码 <br>
+### 4. 部署代码 <br>
 进入 Worker 的 Edit Code <br>
 
 将你提供的完整代码粘贴到左侧编辑器中 <br>
 
 点击 Save and Deploy <br>
 
-5. 设置 Webhook <br>
+### 5. 设置 Webhook <br>
 访问以下 URL 以设置 Webhook（替换 YOUR_WORKER_URL）： <br>
 
 https://YOUR_WORKER_URL.workers.dev/registerWebhook <br>
@@ -65,8 +65,8 @@ Webhook设置成功: https://your-worker.workers.dev/webhook <br>
 
 https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 
-📖 二、使用教程 <br>
-1. 用户命令（私聊机器人） <br>
+## 📖 二、使用教程 <br>
+### 1. 用户命令（私聊机器人） <br>
 命令	说明 <br>
 /start	开始使用，查看用户信息 <br>
 /help	查看帮助信息 <br>
@@ -74,7 +74,7 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 /mode	切换投稿/私聊模式 <br>
 /vpn	免费VPN（需配置关键词回复） <br>
 /ch	汉化（需配置关键词回复） <br>
-2. 管理员命令（在群组或私聊中使用） <br>
+### 2. 管理员命令（在群组或私聊中使用） <br>
 用户管理 <br>
 命令	说明 <br>
 /ban	屏蔽用户（回复或输入ID） <br>
@@ -109,7 +109,7 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 /ads	列出广告 <br>
 /del <消息ID>	删除广告 <br>
 /toggle_ad	开关广告轮播 <br>
-3. 功能说明 <br>
+### 3. 功能说明 <br>
 ✅ 投稿模式 <br>
 用户发送消息给机器人 → 消息转发到审核组 <br>
 
@@ -132,6 +132,8 @@ https://YOUR_WORKER_URL.workers.dev/unRegisterWebhook <br>
 
 ✅ 禁词过滤 <br>
 在管理群组中自动删除包含禁词的消息 <br>
+
+## 🛠 三、常见问题
 
 ❓ 如何设置关键词回复？ <br>
 在数据库组中发送一条消息（如“欢迎使用”） <br>
